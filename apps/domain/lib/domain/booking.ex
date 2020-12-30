@@ -1,9 +1,11 @@
 defmodule Booking do
-  alias Booking.{Repo, Item}
+  @moduledoc false
+  alias Booking.{Item, Repo}
 
   @repo Repo
 
-  def list_items() do
+  @spec list_items :: [Booking.Item.t(), ...]
+  def list_items do
     @repo.all(Item)
   end
 end

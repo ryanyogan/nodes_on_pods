@@ -1,4 +1,5 @@
 defmodule Booking.Item do
+  @moduledoc false
   defstruct ~w(id person place)a
 
   def new(person, place) do

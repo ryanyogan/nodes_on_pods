@@ -8,8 +8,7 @@ defmodule Domain.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      # Starts a worker by calling: Domain.Worker.start_link(arg)
-      # {Domain.Worker, arg}
+      {Domain.Repo, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
